@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd Mailpile
+
+# update your Mailpile
+git pull
+
+# update any submodules (documentation, plug-ins)
+git submodule update

@@ -1,0 +1,53 @@
+{
+    "name": "Mailpile",
+    "id": "mailpile",
+    "packaging_format": 1,
+    "description": {
+        "en": "e-mail that protects your privacy"
+    },
+    "url": "https://www.mailpile.is/",
+    "version": "1.0 release candidate 3",
+    "license": "free",
+    "maintainer": {
+        "name": "Gerhard Hagerer",
+        "email": "ghagerer@posteo.de"
+    },
+    "requirements": {
+        "yunohost": ">= 2.4.0"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx",
+        "gnupg",
+        "openssl",
+        "python"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain for Mailpile"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for Mailpile"
+                },
+                "example": "/mailpile",
+                "default": "/mailpile"
+            },
+            {
+                "name": "user",
+                "type": "user",
+                "ask": {
+                    "en": "Choose a user for Mailpile"
+                }
+            }
+        ]
+    }
+}
