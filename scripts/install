@@ -3,9 +3,12 @@
 sudo apt-get install -y git gnupg openssl \
                      python-pip python-lxml python-dev libjpeg-dev \
                      python-pgpdump python-cryptography libssl-dev \
-                     python-socks python-setuptools
+                     python-socks python-setuptools screen
 
 sudo pip install virtualenv
+
+cd "${0%/*}"
+cd ..
 
 # clone Mailpile, docs and plugins (submodules) to your machine
 git clone --recursive https://github.com/mailpile/Mailpile.git
@@ -20,3 +23,8 @@ virtualenv -p /usr/bin/python2.7 --system-site-packages mp-virtualenv
 source mp-virtualenv/bin/activate
 
 pip install -r requirements.txt
+
+cd ../conf
+cp mailpile.service /lib/systemd/system/
+systemctl daemon-reload
+systemctl start mailpile

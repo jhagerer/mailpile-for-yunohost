@@ -1,3 +1,10 @@
 #!/bin/bash
 
+cd "${0%/*}"
+cd ..
 sudo rm -R Mailpile
+
+systemctl stop mailpile
+rm /lib/systemd/system/mailpile.service 
+systemctl daemon-reload
+

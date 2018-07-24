@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd Mailpile
+cd "${0%/*}"
+
+cd ../Mailpile
 
 # activate the Mailpile virtual Python environment
 source mp-virtualenv/bin/activate
