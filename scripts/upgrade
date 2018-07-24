@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd Mailpile
+cd "${0%/*}"
+cd ../Mailpile
 
 # update your Mailpile
 git pull
