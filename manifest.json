@@ -17,10 +17,7 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx",
-        "gnupg",
-        "openssl",
-        "python"
+        "nginx"
     ],
     "arguments": {
         "install" : [
@@ -42,10 +39,10 @@
                 "default": "/mailpile"
             },
             {
-                "name": "user",
+                "name": "admin",
                 "type": "user",
                 "ask": {
-                    "en": "Choose a user for Mailpile"
+                    "en": "Choose an admin for Mailpile"
                 }
             }
         ]

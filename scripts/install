@@ -28,3 +28,6 @@ cd ../conf
 cp mailpile.service /lib/systemd/system/
 systemctl daemon-reload
 systemctl start mailpile
+
+#cp nginx.conf /etc/nginx/conf.d/domain.tldd/mailpile.conf
+#systemctl reload nginx
