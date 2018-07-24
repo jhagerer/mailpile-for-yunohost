@@ -8,7 +8,7 @@ ExecStart=/usr/bin/screen -dmS mailpile bash run
 Restart=always
 RestartSec=10
 User=admin
-Group=admin
+Group=admins
 
 [Install]
 WantedBy=multi-user.target
