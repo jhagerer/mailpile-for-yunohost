@@ -3,7 +3,7 @@ Description=Mailpile app
 
 [Service]
 Type=forking
-WorkingDirectory=/home/ghagerer/mailpile/scripts
+WorkingDirectory=/home/admin/mailpile-for-yunohost/scripts
 ExecStart=/usr/bin/screen -dmS mailpile bash run 
 Restart=always
 RestartSec=10
